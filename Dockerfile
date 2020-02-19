@@ -4,7 +4,10 @@ LABEL "homepage"="https://github.com/illallangi-actions/ansible-apply-action"
 LABEL "maintainer"="Andrew Cole <andrew.cole@illallangi.com>"
 
 RUN \
-  yum -y install ansible; \
+  yum -y install \
+    ansible \
+    git \
+  ; \
   yum -y update; \
   yum -y clean all
 
