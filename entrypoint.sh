@@ -1,9 +1,7 @@
 #!/bin/sh
 
-source=${SOURCE:-source}/
-
-echo cd ${SOURCE}
-cd ${SOURCE}
+echo cd "${GITHUB_WORKSPACE}"
+cd "${GITHUB_WORKSPACE}"
 
 echo ansible-galaxy install --role-file ./requirements.yaml
 ansible-galaxy install --role-file ./requirements.yaml
